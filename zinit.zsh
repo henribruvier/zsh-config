@@ -13,6 +13,9 @@ zsnippet() { zinit snippet                        "${@}"; }
 zinit ice from"gh-r" as"command" atload'eval "$(starship init zsh)"'
 zload starship/starship
 
+zlight alexrochas/zsh-extract
+
+
 # Don't bind these keys until ready
 bindkey -r '^[[A'
 bindkey -r '^[[B'
@@ -40,6 +43,10 @@ zlight zdharma-continuum/fast-syntax-highlighting
 turbo1; zload zdharma-continuum/history-search-multi-word
 
 turbo2; zload rupa/z
+
+
+
+
 
 # REMOVE TEMPORARY FUNCTIONS
 unset -f turbo0
