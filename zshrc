@@ -12,7 +12,15 @@ export GPG_TTY
 export SCRIPTS=${HOME}/scripts
 export ZSHCONFIG=${ZDOTDIR:-$HOME}/.zsh-config
 
+ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
+if [[ ! -d "${ZINIT_HOME}" ]]; then
+  mkdir -p "$(dirname $ZINIT_HOME)"
+  git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
+fi
+source "${ZINIT_HOME}/zinit.zsh"
+
 ZSH_INIT=${ZSHCONFIG}/_init.sh
+
 
 if [[ -s ${ZSH_INIT} ]]; then
   source ${ZSH_INIT}
@@ -46,3 +54,5 @@ eval "$(fnm env)"
 
 # Private script here
 [ -f ~/.private.zsh ] && source ${HOME}/.private.zsh
+### End of Zinit's installer chunk
+

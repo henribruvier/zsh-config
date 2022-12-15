@@ -1,2 +1,0 @@
-# show open IP4 connections
-lsof -Pnl +M -i4

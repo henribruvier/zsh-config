@@ -1,2 +1,0 @@
-# show listening ports
-lsof -i -P | grep -i 'listen'

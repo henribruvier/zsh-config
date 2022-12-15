@@ -41,10 +41,6 @@ turbo1; zload zdharma-continuum/history-search-multi-word
 
 turbo2; zload rupa/z
 
-turbo2; zlight djui/alias-tips
-
-turbo2; zlight conda-incubator/conda-zsh-completion
-
 # REMOVE TEMPORARY FUNCTIONS
 unset -f turbo0
 unset -f turbo1
